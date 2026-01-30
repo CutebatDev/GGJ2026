@@ -2,8 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - CollisionMask1
+  - CollisionMask2
+  - CollisionMask3
+  - ColliderRender1
+  - ColliderRender2
+  - ColliderRender3
   layers:
   - Default
   - TransparentFX
@@ -41,3 +47,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Sorting Layer 1
+    uniqueID: 3688079551
+    locked: 0
+  - name: Sorting Layer 2
+    uniqueID: 2422550417
+    locked: 0
+  - name: Sorting Layer 3
+    uniqueID: 2859263759
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  - Render Layer 1
+  - Render Layer 2
+  - Render Layer 3
