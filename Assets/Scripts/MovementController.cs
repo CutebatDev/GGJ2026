@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Layouts;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class MovementController : MonoBehaviour
 {
@@ -165,12 +166,43 @@ public class MovementController : MonoBehaviour
         //INITIATE JUMP WITH JUMP BUFFERING AND COYOTE TIME
         if (_jumpBufferTimer > 0f && !_isJumping && (_isGrounded || _coyoteTimer > 0f))
         {
+            InitiateJump(1);
 
+            // [JUMP Rebound Bounce? micro jump]
+            if (_jumpReleasedDuringBuffer)
+            {
+                _isFastFalling = true;
+                _fastFallReleaseSpeed = VerticalVelocity;
+            }
         }
 
         //DOUBLE JUMP
+        else if (_jumpBufferTimer > 0f && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed)
+        {
+            _isFastFalling = false;
+            InitiateJump(1);
+        }
+
         //AIR JUMP AFTER COYOTE TIME LAPSED
+        else if (_jumpBufferTimer > 0f && _isFalling && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed)
+        {
+            InitiateJump(2);
+            _isFastFalling = false;
+        }
+
         //LANDED
+        if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
+        {
+            _isJumping = false;
+            _isFalling = false;
+            _isFastFalling = false;
+            _fastFallTime = 0f;
+            _isPastApexThreshold = false;
+            _numberOfJumpsUsed = 0;
+
+            VerticalVelocity = Physics2D.gravity.y;
+
+        }
     }
 
     private void InitiateJump(int numberOfJumpsUsed)
@@ -187,7 +219,99 @@ public class MovementController : MonoBehaviour
 
     private void Jump()
     {
+        //APPLY GRAVITY WHILE JUMPING
+        if (_isJumping)
+        {
 
+            //CHECK FOR HEAD BUMP
+            if (_bumpedHead)
+            {
+                _isFastFalling = true;
+            }
+
+            //GRAVITY ON ASCENDING
+            if (VerticalVelocity >= 0f)
+            {
+                //APEX CONTROLS
+                _apexPoint = Mathf.InverseLerp(MoveStats.InitializeJumpVelocity, 0f, VerticalVelocity);
+
+                if (_apexPoint > MoveStats.ApexThreshold)
+                {
+                    if (!_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = true;
+                        _timePastApexThreshold = 0f;
+                    }
+                    if (_isPastApexThreshold)
+                    {
+                        _timePastApexThreshold += Time.fixedDeltaTime;
+                        if (_timePastApexThreshold < MoveStats.ApexHangTime)
+                        {
+                            VerticalVelocity = 0f;
+                        }
+                        else
+                        {
+                            VerticalVelocity = -0.01f;
+                        }
+                    }
+                }
+
+                //GRAVITY ON DESCENDING BUT NOT PAST APEX THRESHOLD
+                else
+                {
+                    VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
+                    if (_isPastApexThreshold)
+                    {
+                        _isPastApexThreshold = false;
+                    }
+                }
+            }
+
+            //GRAVITY ON DESCENDING
+            else if (!_isFastFalling)
+            {                                         /* OPTIONAL MULTIPLICATION             */
+                VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+
+            else if (VerticalVelocity < 0f)
+            {
+                if (!_isFalling)
+                {
+                    _isFalling = true;
+                }
+            }
+        }
+
+        //JUMP CUT
+        if (_isFastFalling)
+        {
+            if (_fastFallTime >= MoveStats.TimeForUpwardsCancel)
+            {
+                VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+            }
+            else if (_fastFallTime < MoveStats.TimeForUpwardsCancel)
+            {
+                VerticalVelocity = Mathf.Lerp(_fastFallReleaseSpeed, 0f, (_fastFallTime / MoveStats.TimeForUpwardsCancel));
+            }
+
+            _fastFallTime += Time.fixedDeltaTime;
+        }
+
+        //NORMAL GRAVITY WHILE FALLING
+        if (_isGrounded && !_isJumping)
+        {
+            if (!_isFalling)
+            {
+                _isFalling = true;
+            }
+
+            VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
+        }
+
+        //CLAMP FALL SPEED
+        VerticalVelocity = Mathf.Clamp(VerticalVelocity, -MoveStats.MaxFallSpeed, 50f);
+
+        _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, VerticalVelocity);
     }
 
     #endregion
@@ -226,6 +350,7 @@ public class MovementController : MonoBehaviour
     private void CollisionChecks()
     {
         IsGrounded();
+        BumpedHead();
     }
 
     #endregion
