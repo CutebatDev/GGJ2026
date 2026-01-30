@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - CollisionMask
+  - CollisionMask1
   - CollisionMask2
   - CollisionMask3
+  - ColliderRender1
+  - ColliderRender2
+  - ColliderRender3
   layers:
   - Default
   - TransparentFX
