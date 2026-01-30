@@ -272,7 +272,7 @@ public class MovementController : MonoBehaviour
             //GRAVITY ON DESCENDING
             else if (!_isFastFalling)
             {                                         /* OPTIONAL MULTIPLICATION             */
-                VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+                VerticalVelocity += MoveStats.Gravity /** MoveStats.GravityOnReleaseMultiplier*/ * Time.fixedDeltaTime;
             }
 
             else if (VerticalVelocity < 0f)
@@ -388,7 +388,6 @@ public class MovementController : MonoBehaviour
     }
 
     #endregion
-
 
     #region Timers
 
