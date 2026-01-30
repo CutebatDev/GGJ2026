@@ -55,6 +55,22 @@ public class PlayerMovementStats : ScriptableObject
 
     public float Gravity { get; private set; }
     public float InitializeJumpVelocity { get; private set; }
+    public float AdjustedJumpHeight { get; private set; }
 
+    private void OnValidate()
+    {
+        CalculateValues();
+    }
 
+    private void OnEnable()
+    {
+        CalculateValues();
+    }
+
+    private void CalculateValues()
+    {
+        AdjustedJumpHeight = JumpHeight * JumpHeightCompensationFactor;
+        Gravity = -(2f * AdjustedJumpHeight) / Mathf.Pow(TimeTillJumpApex, 2f);
+        InitializeJumpVelocity = Mathf.Abs(Gravity) * TimeTillJumpApex;
+    }
 }

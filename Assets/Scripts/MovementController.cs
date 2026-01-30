@@ -12,13 +12,36 @@ public class MovementController : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    // movement vars
     private Vector2 _moveVelocity;
     private bool _isFacingRight;
 
+    // collision check vars
     private RaycastHit2D _groundHit;
     private RaycastHit2D _headHit;
     private bool _isGrounded;
     private bool _bumpedHead;
+
+    // jump vars
+    public float VerticalVelocity {  get; private set; }
+    private bool _isJumping;
+    private bool _isFastFalling;
+    private bool _isFalling;
+    private float _fastFallTime;
+    private float _fastFallReleaseSpeed;
+    private int _numberOfJumpsUsed;
+
+    // apex vars
+    private float _apexPoint;
+    private float _timePastApexThreshold;
+    private bool _isPastApexThreshold;
+
+    // jump buffer vars
+    private float _jumpBufferTimer;
+    private bool _jumpReleasedDuringBuffer;
+
+    // coyote time vars
+    private float _coyoteTimer;
 
     private void Awake()
     {
@@ -26,9 +49,17 @@ public class MovementController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        CountTimers();
+        JumpChecks();
+    }
+
     private void FixedUpdate()
     {
         CollisionChecks();
+
+        Jump();
 
         if (_isGrounded)
         {
@@ -97,6 +128,70 @@ public class MovementController : MonoBehaviour
 
     #endregion
 
+    #region
+
+    private void JumpChecks()
+    {
+        //WHEN WE PRESS THE JUMP BUTTON
+        if (InputManager.JumpWasPressed)
+        {
+            _jumpBufferTimer = MoveStats.JumpBufferTime;
+            _jumpReleasedDuringBuffer = false;
+        }
+        //WHEN WE RELEASE THE JUMP BUTTON
+        if (InputManager.JumpWasReleased)
+        {
+            if (_jumpBufferTimer > 0f)
+            {
+                _jumpReleasedDuringBuffer = true;
+            }
+
+            if(_isJumping && VerticalVelocity > 0f)
+            {
+                if (_isPastApexThreshold)
+                {
+                    _isPastApexThreshold = false;
+                    _isFastFalling = true;
+                    _fastFallTime = MoveStats.TimeForUpwardsCancel;
+                    VerticalVelocity = 0f;
+                }
+                else
+                {
+                    _isFastFalling = true;
+                    _fastFallReleaseSpeed = VerticalVelocity;
+                }
+            }
+        }
+        //INITIATE JUMP WITH JUMP BUFFERING AND COYOTE TIME
+        if (_jumpBufferTimer > 0f && !_isJumping && (_isGrounded || _coyoteTimer > 0f))
+        {
+
+        }
+
+        //DOUBLE JUMP
+        //AIR JUMP AFTER COYOTE TIME LAPSED
+        //LANDED
+    }
+
+    private void InitiateJump(int numberOfJumpsUsed)
+    {
+        if (!_isJumping)
+        {
+            _isJumping = true;
+        }
+
+        _jumpBufferTimer = 0f;
+        _numberOfJumpsUsed += numberOfJumpsUsed;
+        VerticalVelocity = MoveStats.InitializeJumpVelocity;
+    }
+
+    private void Jump()
+    {
+
+    }
+
+    #endregion
+
     #region Collision Checks
 
     private void IsGrounded()
@@ -133,5 +228,19 @@ public class MovementController : MonoBehaviour
         IsGrounded();
     }
 
+    #endregion
+
+
+    #region Timers
+
+    private void CountTimers()
+    {
+        _jumpBufferTimer -= Time.deltaTime;
+        if (!_isGrounded)
+        {
+            _coyoteTimer -= Time.deltaTime;
+        }
+        else { _coyoteTimer = MoveStats.JumpCoyoteTime; }
+    }
     #endregion
 }
