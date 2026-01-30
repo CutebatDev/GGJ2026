@@ -132,7 +132,7 @@ CompositeCollider2D:
       - {x: 2.5199668, y: 2.08}
       - {x: -2.4399984, y: 2.079969}
       - {x: -2.3599722, y: 0.56}
-  m_VertexDistance: 0.2
+  m_VertexDistance: 0.005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 4635153828753821474}
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8449756741066653514
 GameObject:
@@ -520,7 +520,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!60 &2541275768919502128
 PolygonCollider2D:
