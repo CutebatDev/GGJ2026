@@ -15,9 +15,12 @@ namespace DefaultNamespace
         private TilemapColliderGenerator m_nonChunkedCollider;
 
         [SerializeField] private Grid m_grid;
+
+        private Vector2 m_lastClickedWorldPosition = Vector2.zero;
         private void Start()
         {
             m_modifiableTexture = ModifiableTexture.CreateFromSprite(m_spriteRenderer.sprite);
+            m_modifiableTexture.SaveFallback();
             m_spriteRenderer.sprite = m_modifiableTexture.Sprite;
             
             float pixelSize = 1 / m_modifiableTexture.Sprite.pixelsPerUnit;
@@ -36,10 +39,19 @@ namespace DefaultNamespace
             float pixelSize = 1 / m_modifiableTexture.Sprite.pixelsPerUnit;
             int radiusInPixels = Mathf.RoundToInt(radius / pixelSize);
             List<Vector2Int> affectedPixelsAsOffset = GetCircleOffsets(radiusInPixels);
-
-            Vector2Int circleCenterInPixelSpace = m_modifiableTexture.WorldToTexturePosition(worldPosition, m_spriteRenderer.transform);
+            
+            Vector2Int circleCenterInPixelSpace = m_modifiableTexture.WorldToTexturePosition(m_lastClickedWorldPosition, m_spriteRenderer.transform);
+            RestoreTextureAt(circleCenterInPixelSpace, affectedPixelsAsOffset);
+            
+            circleCenterInPixelSpace = m_modifiableTexture.WorldToTexturePosition(worldPosition, m_spriteRenderer.transform);
             ModifyTextureAt(circleCenterInPixelSpace, Color.clear, affectedPixelsAsOffset);
+            
+            bool[][] pixelState = m_modifiableTexture.GetPixelsState();
+            m_nonChunkedCollider.RestoreCollider(m_lastClickedWorldPosition, affectedPixelsAsOffset, pixelState);
+            
             m_nonChunkedCollider.DestroyCollider(worldPosition, affectedPixelsAsOffset);
+            
+            m_lastClickedWorldPosition = worldPosition;
         }
 
         private void ModifyTextureAt(Vector2Int circleCenterInPixelSpace, Color color, List<Vector2Int> affectedPixelAsOffset)
@@ -48,6 +60,17 @@ namespace DefaultNamespace
             {
                 Vector2Int pos = circleCenterInPixelSpace + offset;
                 m_modifiableTexture.SetPixel(pos, color);
+            }
+
+            m_modifiableTexture.ApplyChanges();
+        }
+        
+        private void RestoreTextureAt(Vector2Int circleCenterInPixelSpace, List<Vector2Int> affectedPixelAsOffset)
+        {
+            foreach (Vector2Int offset in affectedPixelAsOffset)
+            {
+                Vector2Int pos = circleCenterInPixelSpace + offset;
+                m_modifiableTexture.SetPixel(pos, m_modifiableTexture.GetOriginalPixel(pos));
             }
 
             m_modifiableTexture.ApplyChanges();

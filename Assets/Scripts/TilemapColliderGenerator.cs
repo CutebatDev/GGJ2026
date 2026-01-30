@@ -29,7 +29,25 @@ public class TilemapColliderGenerator : MonoBehaviour
         Vector3Int centerTile = new(pixelState[0].Length/2, pixelState.Length/2);
         Center = m_tilemap.CellToWorld(centerTile);
     }
-
+    
+    public void RestoreCollider(Vector2 originWorldSpace, List<Vector2Int> affectedTilesAsOffset, bool[][] pixelState)
+    {
+        Vector3Int originCell = m_tilemap.WorldToCell(originWorldSpace);
+        foreach (Vector2Int cell in affectedTilesAsOffset)
+        {
+            Vector3Int tilePosition = originCell + (Vector3Int)cell;
+        
+            if (tilePosition.x >= 0 && tilePosition.x < pixelState[0].Length &&
+                tilePosition.y >= 0 && tilePosition.y < pixelState.Length)
+            {
+                if (pixelState[tilePosition.y][tilePosition.x] && !m_tilemap.HasTile(tilePosition))
+                {
+                    m_tilemap.SetTile(tilePosition, m_tile);
+                }
+            }
+        }
+    }
+    
     public void DestroyCollider(Vector2 originWorldSpace, List<Vector2Int> affectedTilesAsOffset)
     {
         Vector3Int originCell = m_tilemap.WorldToCell(originWorldSpace);

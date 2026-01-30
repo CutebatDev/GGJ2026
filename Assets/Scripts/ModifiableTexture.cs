@@ -5,15 +5,28 @@ using UnityEngine.UIElements;
 public class ModifiableTexture
 {
     private Texture2D m_texture;
+    private Texture2D m_textureFallback;
     private Sprite m_sprite;
+    private Sprite m_spriteFallback;
     private Vector2 m_pivot;
     private float m_pixelsPerUnit;
     
     public Texture2D Texture => m_texture;
     public Sprite Sprite => m_sprite;
 
-    public Vector2 Pivot => m_pivot; 
+    public Vector2 Pivot => m_pivot;
+
+    public void SaveFallback()
+    {
+        m_textureFallback = new Texture2D(m_texture.width, m_texture.height, m_texture.format, false);
+        m_textureFallback.filterMode = m_texture.filterMode;
+        
+        Color32[] pixels = m_texture.GetPixels32();
+        m_textureFallback.SetPixels32(pixels);
+        m_textureFallback.Apply();
     
+        m_spriteFallback = m_sprite;
+    }
     public static ModifiableTexture CreateFromSprite(Sprite sprite)
     {
         Rect rect = sprite.rect;
@@ -27,7 +40,8 @@ public class ModifiableTexture
         Vector2 normalizedPivot = new(
             sprite.pivot.x / rect.width,
             sprite.pivot.y / rect.height);
-
+        
+        
         return new ModifiableTexture(texture, normalizedPivot, sprite.pixelsPerUnit);
     }
     
@@ -74,6 +88,13 @@ public class ModifiableTexture
             return false;
         m_texture.SetPixel(texturePosition.x, texturePosition.y, color);
         return true;
+    }
+
+    public Color GetOriginalPixel(Vector2Int texturePosition)
+    {
+        if (!IsValidTexturePosition(texturePosition))
+            return Color.clear;
+        return m_textureFallback.GetPixel(texturePosition.x, texturePosition.y);
     }
     
     public void ApplyChanges()
