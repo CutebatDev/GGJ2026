@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - CollisionMask1
+  - CollisionMask2
+  - CollisionMask3
+  - ColliderRender1
+  - ColliderRender2
+  - ColliderRender3
   layers:
   - Default
   - TransparentFX
@@ -11,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
@@ -41,8 +47,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: World
-    uniqueID: 1973472899
+  - name: Sorting Layer 1
+    uniqueID: 3688079551
+    locked: 0
+  - name: Sorting Layer 2
+    uniqueID: 2422550417
+    locked: 0
+  - name: Sorting Layer 3
+    uniqueID: 2859263759
     locked: 0
   m_RenderingLayers:
   - Default
+  - Render Layer 1
+  - Render Layer 2
+  - Render Layer 3

@@ -116,13 +116,23 @@ CompositeCollider2D:
         Y: 5600000
       - X: 23599998
         Y: 5600000
+  - m_Collider: {fileID: 5866466837877522691}
+    m_ColliderPaths:
+    - - X: 499999
+        Y: 499999
+      - X: -499999
+        Y: 499999
+      - X: -499999
+        Y: -499999
+      - X: 499999
+        Y: -499999
   m_CompositePaths:
     m_Paths:
     - - {x: 2.3599741, y: 0.56}
       - {x: 2.5199668, y: 2.08}
       - {x: -2.4399984, y: 2.079969}
       - {x: -2.3599722, y: 0.56}
-  m_VertexDistance: 0.2
+  m_VertexDistance: 0.005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 4635153828753821474}
@@ -215,7 +225,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8449756741066653514
 GameObject:
@@ -231,11 +241,11 @@ GameObject:
   - component: {fileID: 5866466837877522691}
   m_Layer: 0
   m_Name: Sprite Mask
-  m_TagString: Untagged
+  m_TagString: CollisionMask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1504537383777155242
 Transform:
   m_ObjectHideFlags: 0
@@ -273,7 +283,7 @@ SpriteMask:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
@@ -301,13 +311,13 @@ SpriteMask:
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
   m_MaskAlphaCutoff: 0.2
-  m_FrontSortingLayerID: 0
+  m_FrontSortingLayerID: -606887745
   m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
+  m_FrontSortingLayer: 1
   m_BackSortingLayer: 0
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
   m_MaskSource: 1
 --- !u!212 &6130401452509457860
@@ -333,7 +343,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -359,7 +369,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7ec85a266db138243b0f2edd65697f02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca5cfb364830dd14188646eeb5902bac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -405,9 +415,9 @@ PolygonCollider2D:
   m_CompositeOrder: 7
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.03, y: 0.03, z: 0.03, w: 0.03}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 0.1, y: 0.1}
     newSize: {x: 5.12, y: 5.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -415,13 +425,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.56, y: 2.48}
-      - {x: -2.56, y: 0}
-      - {x: -2.3999999, y: -2}
-      - {x: -2.28, y: -2.12}
-      - {x: 2.28, y: -2.12}
-      - {x: 2.48, y: -1.5999999}
-      - {x: 2.48, y: 2.48}
+    - - {x: 0.049999997, y: -0.049999997}
+      - {x: 0.049999997, y: 0.049999997}
+      - {x: -0.049999997, y: 0.049999997}
+      - {x: -0.049999997, y: -0.049999997}
   m_UseDelaunayMesh: 1
 --- !u!1 &8921117510060532427
 GameObject:
@@ -479,7 +486,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -501,8 +508,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -606887745
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 2
   m_Sprite: {fileID: 21300000, guid: f50389ad69a9b31449179fb1970545cb, type: 3}
@@ -513,7 +520,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!60 &2541275768919502128
 PolygonCollider2D:

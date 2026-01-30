@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2887b946f76ba7b47882d4afe5ab3aac
+guid: 846d71f233e2e17498bfcd9224ae90f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 282485511856995371
-    second: Tree_Stump_0
+      213: -8541936030981981254
+    second: Satellite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tree_Stump_0
+      name: Satellite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 150
-        height: 233
+        width: 473
+        height: 409
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2c3e6c83179be300800000000000000
-      internalID: 282485511856995371
+      spriteID: abb753bdf62f47980800000000000000
+      internalID: -8541936030981981254
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tree_Stump_0: 282485511856995371
+      Satellite_0: -8541936030981981254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
