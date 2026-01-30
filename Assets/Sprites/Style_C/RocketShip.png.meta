@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 08d846ee23c4cc844bb711436a7ca98c
+guid: 12d113829d9aeb14dab22c7a056bdfac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8541936030981981254
-    second: Satellite_0
+      213: -1104133786651172462
+    second: RocketShip_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Satellite_0
+      name: RocketShip_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 473
-        height: 409
+        width: 438
+        height: 403
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abb753bdf62f47980800000000000000
-      internalID: -8541936030981981254
+      spriteID: 2916626cb245da0f0800000000000000
+      internalID: -1104133786651172462
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Satellite_0: -8541936030981981254
+      RocketShip_0: -1104133786651172462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

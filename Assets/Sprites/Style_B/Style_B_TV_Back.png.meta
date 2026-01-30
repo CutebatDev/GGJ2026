@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 693663c1037051d489ce21902a81d3eb
+guid: c04879b627402244b879b40a8d42f340
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6355791582357195018
-    second: Zapper_0
+      213: 1492308399041298854
+    second: Style_B_TV_Back_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zapper_0
+      name: Style_B_TV_Back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 228
-        height: 233
+        x: 166
+        y: 179
+        width: 675
+        height: 729
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0981dc05ce443850800000000000000
-      internalID: 6355791582357195018
+      spriteID: 6a14034159eb5b410800000000000000
+      internalID: 1492308399041298854
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Zapper_0: 6355791582357195018
+      Style_B_TV_Back_0: 1492308399041298854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

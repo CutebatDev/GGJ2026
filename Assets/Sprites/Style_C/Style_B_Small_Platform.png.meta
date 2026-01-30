@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f50389ad69a9b31449179fb1970545cb
+guid: 021954e258cb83d44b07933db293a0f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1189988677141273912
-    second: Style_A_Medium_Platform_0
+      213: 7526326354610532749
+    second: Style_B_Small_Platform_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Style_A_Medium_Platform_0
+      name: Style_B_Small_Platform_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 79
-        width: 122
-        height: 36
+        x: 0
+        y: 0
+        width: 414
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83d1eb3a560b38010800000000000000
-      internalID: 1189988677141273912
+      spriteID: d81b83e71f1e27860800000000000000
+      internalID: 7526326354610532749
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Style_A_Medium_Platform_0: 1189988677141273912
+      Style_B_Small_Platform_0: 7526326354610532749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
