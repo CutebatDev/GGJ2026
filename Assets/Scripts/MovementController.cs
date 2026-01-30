@@ -163,7 +163,7 @@ public class MovementController : MonoBehaviour
                 }
             }
         }
-        //INITIATE JUMP WITH JUMP BUFFERING AND COYOTE TIME
+        //ACTUAL JUMP WITH JUMP BUFFERING AND COYOTE TIME
         if (_jumpBufferTimer > 0f && !_isJumping && (_isGrounded || _coyoteTimer > 0f))
         {
             InitiateJump(1);
@@ -174,9 +174,11 @@ public class MovementController : MonoBehaviour
                 _isFastFalling = true;
                 _fastFallReleaseSpeed = VerticalVelocity;
             }
+
+            //???
         }
 
-        //DOUBLE JUMP
+        //ACTUAL JUMP WITH DOUBLE JUMP
         else if (_jumpBufferTimer > 0f && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed)
         {
             _isFastFalling = false;
@@ -184,7 +186,7 @@ public class MovementController : MonoBehaviour
         }
 
         //AIR JUMP AFTER COYOTE TIME LAPSED
-        else if (_jumpBufferTimer > 0f && _isFalling && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed)
+        else if (_jumpBufferTimer > 0f && _isFalling && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed - 1)
         {
             InitiateJump(2);
             _isFastFalling = false;
@@ -298,7 +300,7 @@ public class MovementController : MonoBehaviour
         }
 
         //NORMAL GRAVITY WHILE FALLING
-        if (_isGrounded && !_isJumping)
+        if (!_isGrounded && !_isJumping)
         {
             if (!_isFalling)
             {
@@ -347,10 +349,42 @@ public class MovementController : MonoBehaviour
         #endregion
     }
 
+    private void BumpHead()
+    {
+        Vector2 boxCastOrigin = new Vector2(_feetColl.bounds.center.x, _bodyColl.bounds.max.y);
+        Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x * MoveStats.HeadWidth, MoveStats.HeadDetectionRayLength);
+
+        _headHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.up, MoveStats.HeadDetectionRayLength, MoveStats.GroundLayer);
+        if (_headHit.collider != null)
+        {
+            _bumpedHead = true;
+        }
+        else { _bumpedHead = false; }
+
+        #region Debug Visualization
+
+        if (MoveStats.DebugShowHeadBumpBox)
+        {
+            float headWidth = MoveStats.HeadWidth;
+
+            Color rayColor;
+            if (_bumpedHead)
+            {
+                rayColor = Color.green;
+            }
+            else { rayColor = Color.red; }
+
+            Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth, boxCastOrigin.y), Vector2.down * MoveStats.HeadDetectionRayLength, rayColor);
+            Debug.DrawRay(new Vector2(boxCastOrigin.x + (boxCastSize.x / 2) * headWidth, boxCastOrigin.y), Vector2.down * MoveStats.HeadDetectionRayLength, rayColor);
+            Debug.DrawRay(new Vector2(boxCastOrigin.x - boxCastSize.x / 2 * headWidth, boxCastOrigin.y - MoveStats.HeadDetectionRayLength), Vector2.right * boxCastSize.x * headWidth, rayColor);
+        }
+        #endregion
+    }
+
     private void CollisionChecks()
     {
         IsGrounded();
-        BumpedHead();
+        BumpHead();
     }
 
     #endregion
