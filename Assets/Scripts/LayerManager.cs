@@ -18,27 +18,12 @@ public enum E_TerrainLayerTags
 }
 public class LayerManager : MonoBehaviour
 {
-    public static LayerManager Instance { get; private set; }
-    
     [SerializeField] private InputActionReference switchLayerInput;
  
     [HideInInspector] public E_CollisionLayerTags currentLayerTag = E_CollisionLayerTags.CollisionMask1;
     [HideInInspector] public E_TerrainLayerTags currentTerrainTag = E_TerrainLayerTags.ColliderRender1;
 
     [SerializeField] private MaskManager maskManager;
-    
-
-    private void Awake() // singleton
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
     
     private void OnEnable()
     {
