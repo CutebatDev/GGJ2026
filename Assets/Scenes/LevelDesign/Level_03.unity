@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 3798841063003384256, guid: 543f08e79688ef048ba9fe3a63664aa1, type: 3}
+      propertyPath: m_TagString
+      value: Suffocate
+      objectReference: {fileID: 0}
     - target: {fileID: 7679742118238871428, guid: 543f08e79688ef048ba9fe3a63664aa1, type: 3}
       propertyPath: m_BackSortingOrder
       value: -4
@@ -3096,6 +3100,10 @@ PrefabInstance:
     - target: {fileID: 3798841063003384256, guid: 6440b913d67cd9548b9cead2ad6d97d7, type: 3}
       propertyPath: m_Name
       value: Satelite
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798841063003384256, guid: 6440b913d67cd9548b9cead2ad6d97d7, type: 3}
+      propertyPath: m_TagString
+      value: Suffocate
       objectReference: {fileID: 0}
     - target: {fileID: 7679742118238871428, guid: 6440b913d67cd9548b9cead2ad6d97d7, type: 3}
       propertyPath: m_BackSortingOrder
@@ -6323,6 +6331,10 @@ PrefabInstance:
     - target: {fileID: 6796450401088838320, guid: 62f61015e08e7fd47b9fc8a8913263a2, type: 3}
       propertyPath: m_Name
       value: TV
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796450401088838320, guid: 62f61015e08e7fd47b9fc8a8913263a2, type: 3}
+      propertyPath: m_TagString
+      value: Suffocate
       objectReference: {fileID: 0}
     - target: {fileID: 8090439053355194485, guid: 62f61015e08e7fd47b9fc8a8913263a2, type: 3}
       propertyPath: m_LocalPosition.x

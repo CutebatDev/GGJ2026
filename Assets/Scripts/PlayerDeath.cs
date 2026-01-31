@@ -1,8 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
+    private bool isInWall;
+
+    private int breatheTicks = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +23,51 @@ public class PlayerDeath : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hazard"))
         {
-            GameStateManager.RestartScene();
+            HandleDeath();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Entered Trigger");
+        if (other.gameObject.CompareTag("Suffocate"))
+        {
+            Debug.Log("Entered wall");
+            isInWall = true;
+            StartCoroutine(Suffocate());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Exited Trigger");
+        
+        if (other.gameObject.CompareTag("Suffocate"))
+        {
+            Debug.Log("Exited wall");
+            breatheTicks = 3;
+            isInWall = false;
+            
+        }
+    }
+
+    private IEnumerator Suffocate()
+    {
+        var time = Time.fixedTime;
+        while (isInWall && breatheTicks > 0)
+        {
+            Debug.Log("Timer tick");
+            breatheTicks--;
+            yield return new WaitForSeconds(1f);
+        }
+        Debug.Log("Timer Ended");
+        
+        if(isInWall)
+            HandleDeath();
+        
+    }
+    private void HandleDeath()
+    {
+        GameStateManager.RestartScene();
     }
 }
