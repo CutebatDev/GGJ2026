@@ -11,6 +11,7 @@ TagManager:
   - ColliderRender2
   - ColliderRender3
   - CollisionMask
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - buttons
   - 
   - 
   - 
