@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: A_Spike_Dynamic
       objectReference: {fileID: 0}
+    - target: {fileID: 4635153828753821474, guid: 7dbe254bb7d0cd8409bd7eca7b83f15b, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 6130401452509457860, guid: 7dbe254bb7d0cd8409bd7eca7b83f15b, type: 3}
       propertyPath: m_SortingLayer
       value: 1
