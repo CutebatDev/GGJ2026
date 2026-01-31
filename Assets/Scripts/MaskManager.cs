@@ -114,6 +114,7 @@ public class MaskManager : MonoBehaviour
             sr = VARIABLE.GetComponent<SpriteRenderer>();
             VARIABLE.transform.position = newPositiion;
             VARIABLE.transform.localScale = size * 10;
+            VARIABLE.transform.rotation = Quaternion.identity;
         }
     }
 
