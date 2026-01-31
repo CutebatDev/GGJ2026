@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 4075800941503742396}
   - component: {fileID: 2209580197862023700}
   - component: {fileID: -4776617484706638860}
+  - component: {fileID: 2079984213014536140}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -373,7 +374,7 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: 0e8f9858fb74c4c4ca011fa40cfc3e7a, type: 2}
   _feetColl: {fileID: 7681790491505311377}
   _bodyColl: {fileID: 2111658693906432142}
-  _audioManager: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!50 &2209580197862023700
 Rigidbody2D:
   serializedVersion: 5
@@ -413,4 +414,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c8d572ef52cf54f93cb180025bb478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 4177823837553941381, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+--- !u!95 &2079984213014536140
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838765247865069530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b230ba1cc8e2b4e48926aaa3d36df76d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
