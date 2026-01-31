@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 772029872337252354}
   - component: {fileID: 6011113571003729328}
   - component: {fileID: 2077472601448837805}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce921ace8579a4247bf130836e390385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  backgroundMusic: {fileID: 0}
+  pixelTrack: {fileID: 0}
+  spaceTrack: {fileID: 0}
+  punkTrack: {fileID: 0}
 --- !u!82 &2077472601448837805
 AudioSource:
   m_ObjectHideFlags: 0

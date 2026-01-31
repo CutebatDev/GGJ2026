@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        trackDictionary = new Dictionary<int, AudioClip>();
         backgroundMusic.clip = pixelTrack;
         backgroundMusic.Play();
         trackDictionary.Add(1, pixelTrack);
