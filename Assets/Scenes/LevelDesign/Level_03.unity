@@ -2299,6 +2299,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: ad5fc6a8-f0fe-4c95-a423-38e0ddf631b5
+--- !u!114 &943857482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Pause
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 0aaffeee-6b67-4206-8b46-66847ae52895
 --- !u!1001 &1172939279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6405,6 +6419,10 @@ PrefabInstance:
       propertyPath: clickInput
       value: 
       objectReference: {fileID: 1283700902}
+    - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: pauseInput
+      value: 
+      objectReference: {fileID: 943857482}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: pointerInput
       value: 

@@ -3145,6 +3145,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 107135414}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: pauseInput
+      value: 
+      objectReference: {fileID: 1829257307}
+    - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: pointerInput
       value: 
       objectReference: {fileID: 562655387}
@@ -3336,6 +3340,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+--- !u!114 &1829257307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Pause
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 0aaffeee-6b67-4206-8b46-66847ae52895
 --- !u!1 &1838448506
 GameObject:
   m_ObjectHideFlags: 0

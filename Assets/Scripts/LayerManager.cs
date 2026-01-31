@@ -24,6 +24,8 @@ public class LayerManager : MonoBehaviour
     [HideInInspector] public E_TerrainLayerTags currentTerrainTag = E_TerrainLayerTags.ColliderRender1;
 
     [SerializeField] private MaskManager maskManager;
+    [SerializeField] private AudioManager audioManager;
+    
     
     private void OnEnable()
     {
@@ -38,10 +40,16 @@ public class LayerManager : MonoBehaviour
 
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
+        audioManager.ChangeAudioTrack(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal)+1);
         currentLayerTag = (E_CollisionLayerTags)((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal);
         currentTerrainTag = (E_TerrainLayerTags)((((int)currentTerrainTag) + 1) % (int)E_TerrainLayerTags.maxVal);
 
         maskManager.UpdateMaskLayer();
     }
-    
+
+    public void SwitchToLayer(int layerNum)
+    {
+        currentLayerTag = (E_CollisionLayerTags)layerNum - 1;
+        currentTerrainTag = (E_TerrainLayerTags)layerNum - 1;
+    }
 }

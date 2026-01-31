@@ -5,10 +5,13 @@ public class DragSelection : MonoBehaviour
 {
     [SerializeField] private InputActionReference pointerInput;
     [SerializeField] private InputActionReference clickInput;
+    [SerializeField] private InputActionReference pauseInput;
     [SerializeField] private SpriteRenderer debugSprite;
-    
     private Vector2 startWorldPos;
     private bool dragging;
+
+    private bool isPaused = false;
+    private bool pauselock = false;
 
     [SerializeField] private MaskManager maskManager;
     
@@ -24,6 +27,7 @@ public class DragSelection : MonoBehaviour
         clickInput.action.started += OnClick;
         clickInput.action.canceled += OnRelease;
         pointerInput.action.performed += OnDrag;
+        pauseInput.action.performed += Pause;
     }
     
     private void OnDisable()
@@ -31,10 +35,12 @@ public class DragSelection : MonoBehaviour
         clickInput.action.started -= OnClick;
         clickInput.action.canceled -= OnRelease;
         pointerInput.action.performed -= OnDrag;
+        pauseInput.action.performed -= Pause;
     }
     
     private void OnClick(InputAction.CallbackContext ctx)
     {
+        pauselock = true;
         Time.timeScale = 0;
         maskManager.DisableMasks();
         debugSprite.enabled = true;
@@ -68,11 +74,32 @@ public class DragSelection : MonoBehaviour
     
     private void OnRelease(InputAction.CallbackContext ctx)
     {
-        Time.timeScale = 1;
+        if (!isPaused){
+            Time.timeScale = 1;
+            pauselock = false;
+        }
         maskManager.UpdateMaskPosition(debugSprite.transform.position, debugSprite.size);
         maskManager.EnableMasks();
         debugSprite.enabled = false;
         
         dragging = false;
+    }
+
+    private void Pause(InputAction.CallbackContext ctx)
+    {
+        if (isPaused)
+        {
+            Unpause();
+            return;
+        }
+        if(pauselock)
+            return;
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+    private void Unpause()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
     }
 }

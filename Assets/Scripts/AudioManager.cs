@@ -19,8 +19,8 @@ public class AudioManager : MonoBehaviour
         backgroundMusic.clip = pixelTrack;
         backgroundMusic.Play();
         trackDictionary.Add(1, pixelTrack);
-        trackDictionary.Add(2, spaceTrack);
-        trackDictionary.Add(3, punkTrack);
+        trackDictionary.Add(3, spaceTrack);
+        trackDictionary.Add(2, punkTrack);
     }
 
     // Update is called once per frame

@@ -305,6 +305,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1245997946}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 567323226}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: switchLayerInput
       value: 
       objectReference: {fileID: 414205999}
@@ -312,6 +316,10 @@ PrefabInstance:
       propertyPath: clickInput
       value: 
       objectReference: {fileID: 1181737401}
+    - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: pauseInput
+      value: 
+      objectReference: {fileID: 1904670832}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: pointerInput
       value: 
@@ -376,6 +384,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74a7b8da2b25743439ab2944f25d6116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+--- !u!114 &567323226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4177823837553941381, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+  m_PrefabInstance: {fileID: 567323224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce921ace8579a4247bf130836e390385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
 --- !u!60 &759035825 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 491605671855356892, guid: 0268f54b3382f8949a6088631d41886f, type: 3}
@@ -3246,6 +3265,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0268f54b3382f8949a6088631d41886f, type: 3}
+--- !u!114 &1904670832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Pause
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 0aaffeee-6b67-4206-8b46-66847ae52895
 --- !u!1001 &2064217137
 PrefabInstance:
   m_ObjectHideFlags: 0
