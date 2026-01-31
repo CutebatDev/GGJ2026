@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 6374717166519069193}
   - component: {fileID: 4704697572323489770}
   - component: {fileID: 1239525922253269519}
+  - component: {fileID: 148124094158363032}
   m_Layer: 0
-  m_Name: LayersSelectionEtc
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,3 +200,17 @@ MonoBehaviour:
   currentLayerTag: 0
   currentTerrainTag: 0
   maskManager: {fileID: 4704697572323489770}
+--- !u!114 &148124094158363032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046934106596011160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a7b8da2b25743439ab2944f25d6116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  NextLevelInput: {fileID: 0}
+  RestartLevelInput: {fileID: 0}
