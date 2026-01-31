@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4454884709510276179, guid: 861e0daa85cf56849ba9f5e29d93d810, type: 3}
+      propertyPath: nextLvl
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4627436437588474278, guid: 861e0daa85cf56849ba9f5e29d93d810, type: 3}
       propertyPath: m_Name
       value: Goal
@@ -195,6 +199,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
+--- !u!212 &308308824 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1014134230762461629, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+  m_PrefabInstance: {fileID: 1401550933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &379557689
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,9 +314,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1245997946}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgRendered
+      value: 
+      objectReference: {fileID: 308308824}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: switchLayerInput
       value: 
       objectReference: {fileID: 414205999}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgMaterials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bdcf2e5dd9b59314bb30dc9dd2ddb33e, type: 2}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e24da736644b80c4f88899c64e76c54a, type: 2}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 12ffeadd35b3f6d4cb3a4620a0befd90, type: 2}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: clickInput
       value: 

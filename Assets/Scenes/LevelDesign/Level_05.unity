@@ -3020,6 +3020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4454884709510276179, guid: 861e0daa85cf56849ba9f5e29d93d810, type: 3}
+      propertyPath: nextLvl
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4627436437588474278, guid: 861e0daa85cf56849ba9f5e29d93d810, type: 3}
       propertyPath: m_Name
       value: Goal
@@ -3145,9 +3149,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 471175178}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgMaterials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: 'bgMaterials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: bdcf2e5dd9b59314bb30dc9dd2ddb33e, type: 2}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e24da736644b80c4f88899c64e76c54a, type: 2}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 12ffeadd35b3f6d4cb3a4620a0befd90, type: 2}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: clickInput
       value: 
