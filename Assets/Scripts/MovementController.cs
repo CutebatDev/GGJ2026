@@ -11,6 +11,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
 
+    [SerializeField] private Animator animator;
+
     private Rigidbody2D _rb;
 
     // movement vars
@@ -48,6 +50,7 @@ public class MovementController : MonoBehaviour
     {
         _isFacingRight = true;
         _rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -78,6 +81,8 @@ public class MovementController : MonoBehaviour
     {
         if (moveInput != Vector2.zero)
         {
+            animator.SetBool("IsWalkng", true);
+
             TurnCheck(moveInput);
 
             Vector2 targetVecloity = Vector2.zero;
@@ -96,6 +101,8 @@ public class MovementController : MonoBehaviour
 
         else if (moveInput == Vector2.zero)
         {
+            animator.SetBool("IsWalkng", false);
+
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
             _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
         }
@@ -129,7 +136,7 @@ public class MovementController : MonoBehaviour
 
     #endregion
 
-    #region
+    #region Jump
 
     private void JumpChecks()
     {
@@ -195,6 +202,8 @@ public class MovementController : MonoBehaviour
         //LANDED
         if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
         {
+            animator.SetBool("isJumping", false);
+
             _isJumping = false;
             _isFalling = false;
             _isFastFalling = false;
@@ -224,6 +233,7 @@ public class MovementController : MonoBehaviour
         //APPLY GRAVITY WHILE JUMPING
         if (_isJumping)
         {
+            animator.SetBool("isJumping", true);
 
             //CHECK FOR HEAD BUMP
             if (_bumpedHead)
