@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 30806820}
   - component: {fileID: 30806821}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: LayersSelectionEtc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,6 +169,7 @@ MonoBehaviour:
   pointerInput: {fileID: 6909503}
   clickInput: {fileID: 261803226}
   debugSprite: {fileID: 30806817}
+  maskManager: {fileID: 30806820}
 --- !u!212 &30806817
 SpriteRenderer:
   serializedVersion: 2
@@ -177,7 +178,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30806815}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -314,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 168c9325e93f42a9a238f7c4a1da129d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskManager
+  layerManager: {fileID: 30806821}
 --- !u!114 &30806821
 MonoBehaviour:
   m_ObjectHideFlags: 0
