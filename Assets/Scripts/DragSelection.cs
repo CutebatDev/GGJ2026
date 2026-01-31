@@ -10,7 +10,7 @@ public class DragSelection : MonoBehaviour
     private Vector2 startWorldPos;
     private bool dragging;
 
-    private MaskManager maskManager;
+    [SerializeField] private MaskManager maskManager;
     
     private Camera cam;
 
@@ -21,7 +21,6 @@ public class DragSelection : MonoBehaviour
     
     private void OnEnable()
     {
-        maskManager = MaskManager.Instance;
         clickInput.action.started += OnClick;
         clickInput.action.canceled += OnRelease;
         pointerInput.action.performed += OnDrag;

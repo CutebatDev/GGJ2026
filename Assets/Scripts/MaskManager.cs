@@ -13,25 +13,13 @@ public class MaskManager : MonoBehaviour
     
     private List<GameObject> spriteMasksAll;
     private List<GameObject> spriteMasksActive;
-    private LayerManager layerManager;
+    [SerializeField] private LayerManager layerManager;
 
     private Dictionary<E_TerrainLayerTags, List<SpriteRenderer>> terrainsByLayer;
     
     
     private void Awake() // singleton
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-
-        layerManager = LayerManager.Instance;
-        
-        
         spriteMasksAll = new List<GameObject>();
         spriteMasksActive = new List<GameObject>();
         
