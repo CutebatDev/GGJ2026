@@ -41,6 +41,7 @@ public class DragSelection : MonoBehaviour
         
         
         Vector2 screenPos = pointerInput.action.ReadValue<Vector2>();
+        Debug.Log(cam);
         startWorldPos = cam.ScreenToWorldPoint(screenPos);
     
         dragging = true;
