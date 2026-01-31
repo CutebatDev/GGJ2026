@@ -292,10 +292,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8449756741066653514, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
-      propertyPath: m_TagString
-      value: CollisionMask1
-      objectReference: {fileID: 0}
     - target: {fileID: 8500699456262341587, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
       propertyPath: m_Size.x
       value: 1.28
@@ -311,10 +307,6 @@ PrefabInstance:
     - target: {fileID: 8500699456262341587, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8921117510060532427, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
-      propertyPath: m_TagString
-      value: ColliderRender1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

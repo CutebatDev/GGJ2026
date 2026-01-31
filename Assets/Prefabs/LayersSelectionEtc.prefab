@@ -111,8 +111,6 @@ MonoBehaviour:
   clickInput: {fileID: 0}
   debugSprite: {fileID: 1504434683411248375}
   maskManager: {fileID: 4704697572323489770}
-  Selection_Max_Width: 1000
-  Selection_Max_Heigt: 1000
 --- !u!331 &6374717166519069193
 SpriteMask:
   m_ObjectHideFlags: 0
