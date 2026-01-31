@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: de73a04895c4524458b7ed91e9f5ab75
+guid: 7a2abe079f77d574d80664e4a0185289
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5446270416137504277
-    second: Transmitter_0
+      213: -1839377291145181718
+    second: Asteroid_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Transmitter_0
+      name: Asteroid_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 171
-        height: 190
+        x: 42
+        y: 13
+        width: 304
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be9b76f79e5fa64b0800000000000000
-      internalID: -5446270416137504277
+      spriteID: ae50f5169183976e0800000000000000
+      internalID: -1839377291145181718
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Transmitter_0: -5446270416137504277
+      Asteroid_0: -1839377291145181718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
