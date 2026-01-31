@@ -3137,9 +3137,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1148686980}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgRendered
+      value: 
+      objectReference: {fileID: 1597838756}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: switchLayerInput
       value: 
       objectReference: {fileID: 471175178}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: 'bgMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bdcf2e5dd9b59314bb30dc9dd2ddb33e, type: 2}
     - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: clickInput
       value: 
@@ -3340,6 +3348,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+--- !u!212 &1597838756 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1014134230762461629, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+  m_PrefabInstance: {fileID: 1597838755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1829257307
 MonoBehaviour:
   m_ObjectHideFlags: 0

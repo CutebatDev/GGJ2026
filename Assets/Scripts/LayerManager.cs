@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,6 +26,8 @@ public class LayerManager : MonoBehaviour
 
     [SerializeField] private MaskManager maskManager;
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private SpriteRenderer bgRendered;
+    [SerializeField] private Material[] bgMaterials;
     
     
     private void OnEnable()
@@ -38,8 +41,14 @@ public class LayerManager : MonoBehaviour
         switchLayerInput.action.started -= SwitchToNextLayer;
     }
 
+    private void Start()
+    {
+        bgRendered.material = bgMaterials[0];
+    }
+
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
+        bgRendered.material = bgMaterials[((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal)];
         audioManager.ChangeAudioTrack(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal)+1);
         currentLayerTag = (E_CollisionLayerTags)((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal);
         currentTerrainTag = (E_TerrainLayerTags)((((int)currentTerrainTag) + 1) % (int)E_TerrainLayerTags.maxVal);
@@ -49,6 +58,7 @@ public class LayerManager : MonoBehaviour
 
     public void SwitchToLayer(int layerNum)
     {
+        bgRendered.material = bgMaterials[layerNum - 1];
         currentLayerTag = (E_CollisionLayerTags)layerNum - 1;
         currentTerrainTag = (E_TerrainLayerTags)layerNum - 1;
     }

@@ -6412,6 +6412,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 933737614}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgRendered
+      value: 
+      objectReference: {fileID: 5910485709748020498}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: switchLayerInput
       value: 
       objectReference: {fileID: 1256483179}
@@ -6858,6 +6862,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+--- !u!212 &5910485709748020498 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1014134230762461629, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+  m_PrefabInstance: {fileID: 5910485709748020497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7806898485258512295
 PrefabInstance:
   m_ObjectHideFlags: 0

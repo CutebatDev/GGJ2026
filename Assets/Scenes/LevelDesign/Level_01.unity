@@ -305,6 +305,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1245997946}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: bgRendered
+      value: 
+      objectReference: {fileID: 1401550934}
+    - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 567323226}
@@ -2368,6 +2372,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+--- !u!212 &1401550934 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1014134230762461629, guid: a49c69f248a50f4418e2c76f1121053e, type: 3}
+  m_PrefabInstance: {fileID: 1401550933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1452479006
 PrefabInstance:
   m_ObjectHideFlags: 0
