@@ -11,6 +11,9 @@ public class DragSelection : MonoBehaviour
     private bool dragging;
 
     [SerializeField] private MaskManager maskManager;
+
+    [SerializeField] private float Selection_Max_Width = 1000;
+    [SerializeField] private float Selection_Max_Heigt = 1000;
     
     private Camera cam;
 
@@ -35,6 +38,7 @@ public class DragSelection : MonoBehaviour
     
     private void OnClick(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Click");
         Time.timeScale = 0;
         maskManager.DisableMasks();
         debugSprite.enabled = true;
@@ -59,7 +63,9 @@ public class DragSelection : MonoBehaviour
         Vector2 currentWorldPos = cam.ScreenToWorldPoint(screenPos);
     
         Vector2 size = new Vector2(currentWorldPos.x - startWorldPos.x,currentWorldPos.y - startWorldPos.y);
-    
+
+        size.x = Mathf.Clamp(size.x, -Selection_Max_Width, Selection_Max_Width);
+        size.y = Mathf.Clamp(size.y, -Selection_Max_Heigt, Selection_Max_Heigt);
     
         debugSprite.size = size;
         debugSprite.transform.position = startWorldPos + size/2;
@@ -67,6 +73,7 @@ public class DragSelection : MonoBehaviour
     
     private void OnRelease(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Release");
         Time.timeScale = 1;
         maskManager.UpdateMaskPosition(debugSprite.transform.position, debugSprite.size);
         maskManager.EnableMasks();
