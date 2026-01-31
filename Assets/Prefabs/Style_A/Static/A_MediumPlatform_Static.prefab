@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: A_MediumPlatform_Static
       objectReference: {fileID: 0}
+    - target: {fileID: 4635153828753821474, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
+      propertyPath: m_TagString
+      value: Suffocate
+      objectReference: {fileID: 0}
     - target: {fileID: 5062523388251390217, guid: 6efb7299abd69984a8ed865f1130d8e7, type: 3}
       propertyPath: m_LocalScale.x
       value: 29.26

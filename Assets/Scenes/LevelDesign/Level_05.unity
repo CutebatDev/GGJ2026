@@ -2579,6 +2579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV
       objectReference: {fileID: 0}
+    - target: {fileID: 6796450401088838320, guid: 62f61015e08e7fd47b9fc8a8913263a2, type: 3}
+      propertyPath: m_TagString
+      value: Suffocate
+      objectReference: {fileID: 0}
     - target: {fileID: 8090439053355194485, guid: 62f61015e08e7fd47b9fc8a8913263a2, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
