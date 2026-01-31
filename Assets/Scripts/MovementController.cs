@@ -10,7 +10,12 @@ public class MovementController : MonoBehaviour
     public PlayerMovementStats MoveStats;
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
+    
+    
+    [SerializeField] private AudioManager _audioManager;
 
+    
+    
     private Rigidbody2D _rb;
 
     // movement vars
@@ -212,6 +217,7 @@ public class MovementController : MonoBehaviour
         if (!_isJumping)
         {
             _isJumping = true;
+            _audioManager.PlayJumpSFX();
         }
 
         _jumpBufferTimer = 0f;
