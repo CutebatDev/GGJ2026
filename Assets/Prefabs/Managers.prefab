@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragSelection
   pointerInput: {fileID: 0}
   clickInput: {fileID: 0}
+  pauseInput: {fileID: 0}
   debugSprite: {fileID: 1504434683411248375}
   maskManager: {fileID: 4704697572323489770}
 --- !u!331 &6374717166519069193
@@ -202,6 +203,7 @@ MonoBehaviour:
   currentLayerTag: 0
   currentTerrainTag: 0
   maskManager: {fileID: 4704697572323489770}
+  audioManager: {fileID: 4177823837553941381}
 --- !u!114 &148124094158363032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,9 +231,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   backgroundMusic: {fileID: 4686544597946420766}
+  soundEffect: {fileID: 4686544597946420766}
   pixelTrack: {fileID: 8300000, guid: 86113539333e67140879ca71c2e70a7f, type: 3}
   spaceTrack: {fileID: 8300000, guid: 15f5e40a921913044ab3c581875b26f4, type: 3}
   punkTrack: {fileID: 8300000, guid: 4a9eb268995655b499393e3f71bb486e, type: 3}
+  jumpSXF: {fileID: 8300000, guid: 2ec0018b20031164187a600711cc284b, type: 3}
+  winSXF: {fileID: 8300000, guid: 3165aaa682ff619489958a91f937e860, type: 3}
+  deathSXF: {fileID: 8300000, guid: 2cb7eb3640bf83e46b21d6d3722c0431, type: 3}
+  switchLayerSXF: {fileID: 8300000, guid: 7a23b55462af42d488387394839541bf, type: 3}
 --- !u!82 &4686544597946420766
 AudioSource:
   m_ObjectHideFlags: 0
