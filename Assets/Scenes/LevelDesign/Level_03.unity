@@ -2130,6 +2130,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559131021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/NextLevel
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: af1395e5-5280-4658-8ec0-9b81c05b8e2c
 --- !u!1 &906671301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2281,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933737614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/RestartLevel
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: ad5fc6a8-f0fe-4c95-a423-38e0ddf631b5
 --- !u!1001 &1172939279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6349,6 +6377,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 148124094158363032, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: NextLevelInput
+      value: 
+      objectReference: {fileID: 559131021}
+    - target: {fileID: 148124094158363032, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: RestartLevelInput
+      value: 
+      objectReference: {fileID: 933737614}
     - target: {fileID: 1239525922253269519, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: switchLayerInput
       value: 
