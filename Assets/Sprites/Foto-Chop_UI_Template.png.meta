@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7f7119364ddc63145879dd5bb5e7374a
+guid: 3c6538e1d96329a4497931b3efea705b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6951104076113066884
-    second: Style_A_Big_Platform_0
+      213: 2779161415244310286
+    second: Foto-Chop_UI_Template_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Style_A_Big_Platform_0
+      name: Foto-Chop_UI_Template_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 13
-        width: 122
-        height: 111
+        x: 9
+        y: 10
+        width: 45
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48b3d752458477060800000000000000
-      internalID: 6951104076113066884
+      spriteID: e07eb112590919620800000000000000
+      internalID: 2779161415244310286
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Style_A_Big_Platform_0: 6951104076113066884
+      Foto-Chop_UI_Template_0: 2779161415244310286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
