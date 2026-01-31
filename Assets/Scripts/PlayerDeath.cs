@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
+
+    [SerializeField] private AudioManager audioManager;
     private bool isInWall;
 
     private int breatheTicks = 3;
@@ -69,5 +71,6 @@ public class PlayerDeath : MonoBehaviour
     private void HandleDeath()
     {
         GameStateManager.RestartScene();
+        audioManager.PlayDeathSFX();
     }
 }
