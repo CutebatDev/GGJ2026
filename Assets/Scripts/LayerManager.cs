@@ -30,7 +30,6 @@ public class LayerManager : MonoBehaviour
     private void OnEnable()
     {
         switchLayerInput.action.started += SwitchToNextLayer;
-
     }
     
     private void OnDisable()

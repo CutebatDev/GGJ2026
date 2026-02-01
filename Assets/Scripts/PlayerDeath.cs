@@ -70,7 +70,7 @@ public class PlayerDeath : MonoBehaviour
     }
     private void HandleDeath()
     {
-        GameStateManager.RestartScene();
         audioManager.PlayDeathSFX();
+        GameStateManager.RestartScene();
     }
 }
