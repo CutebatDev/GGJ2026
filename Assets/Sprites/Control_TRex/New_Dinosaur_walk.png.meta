@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: c671ed58874419643b236c2bf2c75830
+guid: 691e5e7529ea1d249906877540decbf4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 281751177799587656
-    second: Dinsoaur_Jump_Anim-Sheet_0
+      213: 8896797769159317999
+    second: Dinosaur_walk_0
   - first:
-      213: 2380099000866553342
-    second: Dinsoaur_Jump_Anim-Sheet_1
+      213: 6207937947423111374
+    second: Dinosaur_walk_1
   - first:
-      213: 782167576909077524
-    second: Dinsoaur_Jump_Anim-Sheet_2
+      213: -1113390902241815675
+    second: Dinosaur_walk_2
   - first:
-      213: -4701341714300019330
-    second: Dinsoaur_Jump_Anim-Sheet_3
+      213: -8249432582671746642
+    second: Dinosaur_walk_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_0
+      name: Dinosaur_walk_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 7
-        width: 82
-        height: 81
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 847dac3143bf8e300800000000000000
-      internalID: 281751177799587656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 7
-        width: 82
+        x: 9
+        y: 6
+        width: 84
         height: 83
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efdb9e45e6fc70120800000000000000
-      internalID: 2380099000866553342
+      spriteID: fe99a3d0f66c77b70800000000000000
+      internalID: 8896797769159317999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_2
+      name: Dinosaur_walk_1
       rect:
         serializedVersion: 2
-        x: 266
-        y: 7
-        width: 82
-        height: 83
+        x: 137
+        y: 6
+        width: 84
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41c5e706441dada00800000000000000
-      internalID: 782167576909077524
+      spriteID: ec872df0ca6072650800000000000000
+      internalID: 6207937947423111374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_3
+      name: Dinosaur_walk_2
       rect:
         serializedVersion: 2
-        x: 394
-        y: 7
-        width: 82
-        height: 82
+        x: 265
+        y: 6
+        width: 84
+        height: 85
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7ddb6f9e9a71ceb0800000000000000
-      internalID: -4701341714300019330
+      spriteID: 58399b79fd07c80f0800000000000000
+      internalID: -1113390902241815675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dinosaur_walk_3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 6
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9315ff5c0248d80800000000000000
+      internalID: -8249432582671746642
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2aaf5d64940fda644b500eb667ee2a31
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Dinsoaur_Jump_Anim-Sheet_0: 281751177799587656
-      Dinsoaur_Jump_Anim-Sheet_1: 2380099000866553342
-      Dinsoaur_Jump_Anim-Sheet_2: 782167576909077524
-      Dinsoaur_Jump_Anim-Sheet_3: -4701341714300019330
+      Dinosaur_walk_0: 8896797769159317999
+      Dinosaur_walk_1: 6207937947423111374
+      Dinosaur_walk_2: -1113390902241815675
+      Dinosaur_walk_3: -8249432582671746642
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
