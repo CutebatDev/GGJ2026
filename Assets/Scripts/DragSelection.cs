@@ -85,7 +85,19 @@ public class DragSelection : MonoBehaviour
         dragging = false;
     }
 
-    private void Pause(InputAction.CallbackContext ctx)
+    public void Pause()
+    {
+        if (isPaused)
+        {
+            Unpause();
+            return;
+        }
+        if(pauselock)
+            return;
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+    public void Pause(InputAction.CallbackContext ctx)
     {
         if (isPaused)
         {

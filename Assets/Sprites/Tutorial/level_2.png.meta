@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: c671ed58874419643b236c2bf2c75830
+guid: 335aea0c963cfc94eb3077accec85589
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 281751177799587656
-    second: Dinsoaur_Jump_Anim-Sheet_0
-  - first:
-      213: 2380099000866553342
-    second: Dinsoaur_Jump_Anim-Sheet_1
-  - first:
-      213: 782167576909077524
-    second: Dinsoaur_Jump_Anim-Sheet_2
-  - first:
-      213: -4701341714300019330
-    second: Dinsoaur_Jump_Anim-Sheet_3
+      213: -7409730035925219397
+    second: level_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_0
+      name: level_2_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 7
-        width: 82
-        height: 81
+        x: 0
+        y: 0
+        width: 158
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 847dac3143bf8e300800000000000000
-      internalID: 281751177799587656
+      spriteID: bb7822f6ac95b2990800000000000000
+      internalID: -7409730035925219397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_1
+      name: level_2_1
       rect:
         serializedVersion: 2
-        x: 138
-        y: 7
-        width: 82
-        height: 83
+        x: 158
+        y: 0
+        width: 158
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: efdb9e45e6fc70120800000000000000
-      internalID: 2380099000866553342
+      spriteID: 77229deaba524d344baa0004c640b455
+      internalID: -1621599896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_2
+      name: level_2_2
       rect:
         serializedVersion: 2
-        x: 266
-        y: 7
-        width: 82
-        height: 83
+        x: 316
+        y: 0
+        width: 158
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 41c5e706441dada00800000000000000
-      internalID: 782167576909077524
+      spriteID: 3044ca1c7bb87d244b67a285ab5bd80f
+      internalID: 574117294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dinsoaur_Jump_Anim-Sheet_3
+      name: level_2_3
       rect:
         serializedVersion: 2
-        x: 394
-        y: 7
-        width: 82
-        height: 82
+        x: 474
+        y: 0
+        width: 158
+        height: 158
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7ddb6f9e9a71ceb0800000000000000
-      internalID: -4701341714300019330
+      spriteID: 41b901bc396fb7246a4dbcedef9fa1d0
+      internalID: 1976947031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_2_4
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 0
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380e974c0f89e5748aa385c3d4f1ee5c
+      internalID: 1723362090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_2_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 0
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a5ee090d9cff640a102b56af0eafe3
+      internalID: -1959215938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_2_6
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d39154862389d4b876ab91e9ecc10e
+      internalID: -1578691158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: level_2_7
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 0
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f435623b3cd148441895c2199bc55dd6
+      internalID: 991061492
       vertices: []
       indices: 
       edges: []
@@ -200,7 +279,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2aaf5d64940fda644b500eb667ee2a31
+    spriteID: 8aab94f8e7246b940bc8d3c3eb95a38e
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +289,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":158.0,"y":158.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Dinsoaur_Jump_Anim-Sheet_0: 281751177799587656
-      Dinsoaur_Jump_Anim-Sheet_1: 2380099000866553342
-      Dinsoaur_Jump_Anim-Sheet_2: 782167576909077524
-      Dinsoaur_Jump_Anim-Sheet_3: -4701341714300019330
+      level_2_0: -7409730035925219397
+      level_2_1: -1621599896
+      level_2_2: 574117294
+      level_2_3: 1976947031
+      level_2_4: 1723362090
+      level_2_5: -1959215938
+      level_2_6: -1578691158
+      level_2_7: 991061492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
