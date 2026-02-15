@@ -39,7 +39,7 @@ public class GameStateManager : MonoBehaviour
 
     public static void LoadLevel(int levelNumber)
     {
-        currentLevelNumber = levelNumber;
+        currentLevelNumber = levelNumber + 1;
         SceneManager.LoadScene(levelNumber);
     }
 
