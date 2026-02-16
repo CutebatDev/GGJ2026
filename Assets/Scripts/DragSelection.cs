@@ -1,14 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DragSelection : MonoBehaviour
 {
     [SerializeField] private InputActionReference pointerInput;
     [SerializeField] private InputActionReference clickInput;
+    [SerializeField] private InputActionReference pauseInput;
     [SerializeField] private SpriteRenderer debugSprite;
-    
+    [SerializeField] private GameObject freezeEffectSprite;
     private Vector2 startWorldPos;
     private bool dragging;
+
+    private bool isPaused = false;
+    private bool pauselock = false;
 
     [SerializeField] private MaskManager maskManager;
     
@@ -17,6 +22,7 @@ public class DragSelection : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+        freezeEffectSprite.SetActive(false);
     }
     
     private void OnEnable()
@@ -24,6 +30,7 @@ public class DragSelection : MonoBehaviour
         clickInput.action.started += OnClick;
         clickInput.action.canceled += OnRelease;
         pointerInput.action.performed += OnDrag;
+        pauseInput.action.performed += Pause;
     }
     
     private void OnDisable()
@@ -31,14 +38,16 @@ public class DragSelection : MonoBehaviour
         clickInput.action.started -= OnClick;
         clickInput.action.canceled -= OnRelease;
         pointerInput.action.performed -= OnDrag;
+        pauseInput.action.performed -= Pause;
     }
     
     private void OnClick(InputAction.CallbackContext ctx)
     {
+        pauselock = true;
         Time.timeScale = 0;
+
         maskManager.DisableMasks();
         debugSprite.enabled = true;
-        
         
         Vector2 screenPos = pointerInput.action.ReadValue<Vector2>();
         Debug.Log(cam);
@@ -68,11 +77,38 @@ public class DragSelection : MonoBehaviour
     
     private void OnRelease(InputAction.CallbackContext ctx)
     {
-        Time.timeScale = 1;
+        if (!isPaused)
+            Time.timeScale = 1;
+
+        pauselock = false;
         maskManager.UpdateMaskPosition(debugSprite.transform.position, debugSprite.size);
         maskManager.EnableMasks();
         debugSprite.enabled = false;
         
         dragging = false;
+    }
+
+    public void Pause()
+    {
+        if (isPaused)
+        {
+            Unpause();
+            return;
+        }
+        if(pauselock)
+            return;
+        Time.timeScale = 0;
+        freezeEffectSprite.SetActive(true);
+        isPaused = true;
+    }
+    public void Pause(InputAction.CallbackContext ctx)
+    {
+        Pause();
+    }
+    private void Unpause()
+    {
+        Time.timeScale = 1;
+        freezeEffectSprite.SetActive(false);
+        isPaused = false;
     }
 }

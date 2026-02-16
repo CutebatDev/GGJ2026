@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,12 +19,21 @@ public enum E_TerrainLayerTags
 }
 public class LayerManager : MonoBehaviour
 {
+    [Header("Starting Layer Override")]
+    [SerializeField] private int startingLayer = 1;
+    [SerializeField] private bool changeStartingLayer = false;
+
+    [Header("References")]
     [SerializeField] private InputActionReference switchLayerInput;
  
     [HideInInspector] public E_CollisionLayerTags currentLayerTag = E_CollisionLayerTags.CollisionMask1;
     [HideInInspector] public E_TerrainLayerTags currentTerrainTag = E_TerrainLayerTags.ColliderRender1;
 
     [SerializeField] private MaskManager maskManager;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private SpriteRenderer bgRendered;
+    [SerializeField] private Material[] bgMaterials;
+    
     
     private void OnEnable()
     {
@@ -36,12 +46,29 @@ public class LayerManager : MonoBehaviour
         switchLayerInput.action.started -= SwitchToNextLayer;
     }
 
+    private void Start()
+    {
+        bgRendered.material = bgMaterials[0];
+
+        if (changeStartingLayer)
+            SwitchToLayer(startingLayer);
+    }
+
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
-        currentLayerTag = (E_CollisionLayerTags)((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal);
-        currentTerrainTag = (E_TerrainLayerTags)((((int)currentTerrainTag) + 1) % (int)E_TerrainLayerTags.maxVal);
+        Debug.Log("tab input");
+        SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal) + 1);
+    }
+
+    public void SwitchToLayer(int layerNum)
+    {
+        bgRendered.material = bgMaterials[layerNum - 1];
+        audioManager.ChangeAudioTrack(layerNum);
+        currentLayerTag = (E_CollisionLayerTags)layerNum - 1;
+        currentTerrainTag = (E_TerrainLayerTags)layerNum - 1;
 
         maskManager.UpdateMaskLayer();
+        Debug.Log($"switch to layer worked, {layerNum}");
+
     }
-    
 }

@@ -107,6 +107,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6836784413132804991}
   - {fileID: 1535571822763166597}
   - {fileID: 1334066024731526101}
   m_Father: {fileID: 4774234132227327272}
@@ -180,6 +181,75 @@ CapsuleCollider2D:
   m_Offset: {x: 0.05, y: -0.02}
   m_Size: {x: 0.71, y: 0.72}
   m_Direction: 0
+--- !u!1 &4338863448479984256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6836784413132804991}
+  - component: {fileID: 7449155877238675147}
+  m_Layer: 6
+  m_Name: Suffocate Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6836784413132804991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4338863448479984256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.055, y: 0.031, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 174898570593370633}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &7449155877238675147
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4338863448479984256}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.05, y: 0.07}
+  m_Size: {x: 0.22, y: 0.0001}
+  m_Direction: 0
 --- !u!1 &5838765247865069530
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +264,7 @@ GameObject:
   - component: {fileID: 4075800941503742396}
   - component: {fileID: 2209580197862023700}
   - component: {fileID: -4776617484706638860}
+  - component: {fileID: 308255934683702016}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -264,7 +335,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2014
+  m_SortingOrder: 102
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4174765860304395753, guid: 968b098216ad0b049a1abce2c9fb1045, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -303,6 +374,7 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: 0e8f9858fb74c4c4ca011fa40cfc3e7a, type: 2}
   _feetColl: {fileID: 7681790491505311377}
   _bodyColl: {fileID: 2111658693906432142}
+  _audioManager: {fileID: 0}
 --- !u!50 &2209580197862023700
 Rigidbody2D:
   serializedVersion: 5
@@ -342,3 +414,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c8d572ef52cf54f93cb180025bb478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  audioManager: {fileID: 0}
+--- !u!95 &308255934683702016
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838765247865069530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b230ba1cc8e2b4e48926aaa3d36df76d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

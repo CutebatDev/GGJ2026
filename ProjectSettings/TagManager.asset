@@ -12,6 +12,7 @@ TagManager:
   - ColliderRender3
   - CollisionMask
   - Hazard
+  - Suffocate
   layers:
   - Default
   - TransparentFX
