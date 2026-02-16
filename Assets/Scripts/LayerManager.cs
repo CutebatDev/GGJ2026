@@ -48,7 +48,7 @@ public class LayerManager : MonoBehaviour
 
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
-		SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal))
+        SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal));
     }
 
     public void SwitchToLayer(int layerNum)
