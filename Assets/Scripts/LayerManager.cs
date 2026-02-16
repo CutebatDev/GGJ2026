@@ -48,18 +48,17 @@ public class LayerManager : MonoBehaviour
 
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
-        bgRendered.material = bgMaterials[((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal)];
-        audioManager.ChangeAudioTrack(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal)+1);
-        currentLayerTag = (E_CollisionLayerTags)((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal);
-        currentTerrainTag = (E_TerrainLayerTags)((((int)currentTerrainTag) + 1) % (int)E_TerrainLayerTags.maxVal);
-
-        maskManager.UpdateMaskLayer();
+		SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal))
     }
 
     public void SwitchToLayer(int layerNum)
     {
         bgRendered.material = bgMaterials[layerNum - 1];
+        audioManager.ChangeAudioTrack(layerNum);
         currentLayerTag = (E_CollisionLayerTags)layerNum - 1;
         currentTerrainTag = (E_TerrainLayerTags)layerNum - 1;
+
+        maskManager.UpdateMaskLayer();
+
     }
 }

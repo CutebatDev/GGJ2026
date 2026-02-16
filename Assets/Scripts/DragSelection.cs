@@ -99,15 +99,7 @@ public class DragSelection : MonoBehaviour
     }
     public void Pause(InputAction.CallbackContext ctx)
     {
-        if (isPaused)
-        {
-            Unpause();
-            return;
-        }
-        if(pauselock)
-            return;
-        Time.timeScale = 0;
-        isPaused = true;
+        Pause();
     }
     private void Unpause()
     {
