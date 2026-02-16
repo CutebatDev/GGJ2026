@@ -114,6 +114,7 @@ MonoBehaviour:
   clickInput: {fileID: 0}
   pauseInput: {fileID: 0}
   debugSprite: {fileID: 1504434683411248375}
+  freezeEffectSprite: {fileID: 0}
   maskManager: {fileID: 4704697572323489770}
 --- !u!331 &6374717166519069193
 SpriteMask:
@@ -199,6 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b8b268093d4630aae0e6db8857726e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LayerManager
+  startingLayer: 1
+  changeStartingLayer: 0
   switchLayerInput: {fileID: 0}
   currentLayerTag: 0
   currentTerrainTag: 0
@@ -257,7 +260,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
