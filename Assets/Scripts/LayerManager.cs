@@ -19,6 +19,11 @@ public enum E_TerrainLayerTags
 }
 public class LayerManager : MonoBehaviour
 {
+    [Header("Starting Layer Override")]
+    [SerializeField] private int startingLayer = 1;
+    [SerializeField] private bool changeStartingLayer = false;
+
+    [Header("References")]
     [SerializeField] private InputActionReference switchLayerInput;
  
     [HideInInspector] public E_CollisionLayerTags currentLayerTag = E_CollisionLayerTags.CollisionMask1;
@@ -44,6 +49,9 @@ public class LayerManager : MonoBehaviour
     private void Start()
     {
         bgRendered.material = bgMaterials[0];
+
+        if (changeStartingLayer)
+            SwitchToLayer(startingLayer);
     }
 
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
