@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DragSelection : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DragSelection : MonoBehaviour
     [SerializeField] private InputActionReference clickInput;
     [SerializeField] private InputActionReference pauseInput;
     [SerializeField] private SpriteRenderer debugSprite;
+    [SerializeField] private GameObject freezeEffectSprite;
     private Vector2 startWorldPos;
     private bool dragging;
 
@@ -20,6 +22,7 @@ public class DragSelection : MonoBehaviour
     private void Awake()
     {
         cam = Camera.main;
+        freezeEffectSprite.SetActive(false);
     }
     
     private void OnEnable()
@@ -95,6 +98,7 @@ public class DragSelection : MonoBehaviour
         if(pauselock)
             return;
         Time.timeScale = 0;
+        freezeEffectSprite.SetActive(true);
         isPaused = true;
     }
     public void Pause(InputAction.CallbackContext ctx)
@@ -104,6 +108,7 @@ public class DragSelection : MonoBehaviour
     private void Unpause()
     {
         Time.timeScale = 1;
+        freezeEffectSprite.SetActive(false);
         isPaused = false;
     }
 }

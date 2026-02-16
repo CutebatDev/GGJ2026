@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: pointerInput
       value: 
       objectReference: {fileID: 214166249}
+    - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: freezeEffectSprite
+      value: 
+      objectReference: {fileID: 695185723}
     - target: {fileID: 1604857534198219038, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -708,6 +712,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+--- !u!1 &695185723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 745028138654994157, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+  m_PrefabInstance: {fileID: 695185722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!60 &759035825 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 491605671855356892, guid: 0268f54b3382f8949a6088631d41886f, type: 3}
