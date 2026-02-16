@@ -45,9 +45,9 @@ public class DragSelection : MonoBehaviour
     {
         pauselock = true;
         Time.timeScale = 0;
+
         maskManager.DisableMasks();
         debugSprite.enabled = true;
-        
         
         Vector2 screenPos = pointerInput.action.ReadValue<Vector2>();
         Debug.Log(cam);
@@ -77,10 +77,10 @@ public class DragSelection : MonoBehaviour
     
     private void OnRelease(InputAction.CallbackContext ctx)
     {
-        if (!isPaused){
+        if (!isPaused)
             Time.timeScale = 1;
-            pauselock = false;
-        }
+
+        pauselock = false;
         maskManager.UpdateMaskPosition(debugSprite.transform.position, debugSprite.size);
         maskManager.EnableMasks();
         debugSprite.enabled = false;

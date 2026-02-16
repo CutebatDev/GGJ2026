@@ -526,6 +526,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5889799611281622016, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1169025026}
+    - target: {fileID: 5889799611281622016, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Pause
+      objectReference: {fileID: 0}
     - target: {fileID: 6263314345946154505, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
       propertyPath: m_Name
       value: UI 1
@@ -1728,6 +1736,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2b8b268093d4630aae0e6db8857726e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LayerManager
+--- !u!114 &1169025026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+  m_PrefabInstance: {fileID: 1169025023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbb2ed99c024bf6936bbc85b3f4cf5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragSelection
 --- !u!114 &1188996518
 MonoBehaviour:
   m_ObjectHideFlags: 0

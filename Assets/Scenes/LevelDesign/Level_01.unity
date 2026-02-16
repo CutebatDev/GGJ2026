@@ -634,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 5889799611281622016, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      objectReference: {fileID: 1336919132}
     - target: {fileID: 5889799611281622016, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2673,6 +2673,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: ad5fc6a8-f0fe-4c95-a423-38e0ddf631b5
+--- !u!114 &1336919132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+  m_PrefabInstance: {fileID: 567323224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbb2ed99c024bf6936bbc85b3f4cf5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragSelection
 --- !u!1001 &1401550933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5611,7 +5622,7 @@ SceneRoots:
   - {fileID: 1690768780}
   - {fileID: 1401550933}
   - {fileID: 2118319047}
-  - {fileID: 379557692}
   - {fileID: 166359417}
   - {fileID: 1099941945}
   - {fileID: 695185722}
+  - {fileID: 379557692}
