@@ -48,7 +48,8 @@ public class LayerManager : MonoBehaviour
 
     public void SwitchToNextLayer(InputAction.CallbackContext ctx)
     {
-        SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal));
+        Debug.Log("tab input");
+        SwitchToLayer(((((int)currentLayerTag) + 1) % (int)E_CollisionLayerTags.maxVal) + 1);
     }
 
     public void SwitchToLayer(int layerNum)
@@ -59,6 +60,7 @@ public class LayerManager : MonoBehaviour
         currentTerrainTag = (E_TerrainLayerTags)layerNum - 1;
 
         maskManager.UpdateMaskLayer();
+        Debug.Log($"switch to layer worked, {layerNum}");
 
     }
 }
