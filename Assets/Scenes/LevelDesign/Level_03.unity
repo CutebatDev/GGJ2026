@@ -5237,6 +5237,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+--- !u!1 &1701102588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 745028138654994157, guid: eea1b400ecfca0446a0eb152b31eabd4, type: 3}
+  m_PrefabInstance: {fileID: 1701102587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1723400860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6664,6 +6669,10 @@ PrefabInstance:
       propertyPath: pointerInput
       value: 
       objectReference: {fileID: 1723400860}
+    - target: {fileID: 1600280843381621595, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
+      propertyPath: freezeEffectSprite
+      value: 
+      objectReference: {fileID: 1701102588}
     - target: {fileID: 1604857534198219038, guid: 35a46682292c93e4f86b719005b08de3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17875
